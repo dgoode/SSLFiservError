@@ -1,0 +1,13 @@
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\bin\Debug\fiservtest3.exe.config
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\bin\Debug\fiservtest3.exe
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\bin\Debug\fiservtest3.pdb
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\bin\Debug\fiservtest3.xml
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.vbproj.AssemblyReference.cache
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.vbproj.SuggestedBindingRedirects.cache
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.Form1.resources
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.Resources.resources
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.vbproj.GenerateResource.cache
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.vbproj.CoreCompileInputs.cache
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.exe
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.xml
+C:\Users\dgoode\source\repos\fiservtest3\fiservtest3\obj\Debug\fiservtest3.pdb
