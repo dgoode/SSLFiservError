@@ -3,6 +3,7 @@ Imports System.Net
 Imports System.Net.Http
 Imports System.Security.Cryptography.X509Certificates
 Imports System.Text
+Imports Microsoft.VisualBasic.Logging
 
 Public Class Form1
 
@@ -16,7 +17,7 @@ Public Class Form1
 
         Dim client As New HttpClient(handler)
 
-        client.DefaultRequestHeaders.Add("Content-Type", "application/x-www-form-urlencoded")
+        ' client.DefaultRequestHeaders.Add("Content-Type", "application/x-www-form-urlencoded")
         client.DefaultRequestHeaders.Accept.Add(New Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"))
 
         client.DefaultRequestHeaders.Add("x-fapi-financial-id", "12345678")
@@ -28,9 +29,10 @@ Public Class Form1
 
         If response.IsSuccessStatusCode Then
             Dim responseContent As String = response.Content.ReadAsStringAsync().Result
-            '  Do something with the response
+            MessageBox.Show(responseContent)
         Else
-            'Handle error
+            Dim responseContent As String = response.Content.ReadAsStringAsync().Result
+            MessageBox.Show(responseContent)
         End If
     End Sub
 
@@ -64,14 +66,21 @@ Public Class Form1
         Using reqStream = httpWebRequest.GetRequestStream()
             reqStream.Write(byteArray, 0, byteArray.Length)
         End Using
-
         Dim responseContent As String = String.Empty
-        Using response = DirectCast(httpWebRequest.GetResponse(), HttpWebResponse),
-          responseStream = response.GetResponseStream(),
-          reader = New StreamReader(responseStream)
-            responseContent = reader.ReadToEnd()
-            reader.Close()
-        End Using
+        Try
+
+            Using response = DirectCast(httpWebRequest.GetResponse(), HttpWebResponse),
+              responseStream = response.GetResponseStream(),
+              reader = New StreamReader(responseStream)
+                responseContent = reader.ReadToEnd()
+                reader.Close()
+                MessageBox.Show(responseContent)
+            End Using
+        Catch ex As Exception
+            Dim errorex As String = ex.ToString
+            MessageBox.Show(errorex)
+        End Try
+
 
     End Sub
 
@@ -82,4 +91,6 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         testHttpClient()
     End Sub
+
+
 End Class
